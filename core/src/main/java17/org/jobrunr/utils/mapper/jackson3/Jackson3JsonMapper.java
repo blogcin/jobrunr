@@ -16,9 +16,12 @@ import org.jobrunr.utils.mapper.jackson3.modules.JobRunrTimeModule;
 import tools.jackson.databind.DefaultTyping;
 import tools.jackson.databind.MapperFeature;
 import tools.jackson.databind.SerializationFeature;
+import tools.jackson.databind.cfg.CoercionAction;
+import tools.jackson.databind.cfg.CoercionInputShape;
 import tools.jackson.databind.cfg.EnumFeature;
 import tools.jackson.databind.exc.InvalidDefinitionException;
 import tools.jackson.databind.jsontype.BasicPolymorphicTypeValidator;
+import tools.jackson.databind.type.LogicalType;
 
 import java.io.OutputStream;
 import java.nio.file.Path;
@@ -70,6 +73,8 @@ public class Jackson3JsonMapper implements JsonMapper {
                 .enable(MapperFeature.DEFAULT_VIEW_INCLUSION)
                 .enable(MapperFeature.ALLOW_FINAL_FIELDS_AS_MUTATORS)
                 .addModules(new JobRunrModule(), new JobRunrTimeModule())
+                .withCoercionConfig(LogicalType.Boolean, cfg ->
+                        cfg.setCoercion(CoercionInputShape.Integer, CoercionAction.TryConvert))
                 .activateDefaultTypingAsProperty(typeValidator, DefaultTyping.OBJECT_AND_NON_CONCRETE, "@class")
                 .build();
     }
