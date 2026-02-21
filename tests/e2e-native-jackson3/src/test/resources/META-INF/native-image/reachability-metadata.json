@@ -1,0 +1,381 @@
+{
+  "reflection": [
+    {
+      "type": "ch.qos.logback.classic.BasicConfigurator",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "ch.qos.logback.classic.spi.LogbackServiceProvider"
+    },
+    {
+      "type": "ch.qos.logback.classic.util.DefaultJoranConfigurator",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "com.tngtech.archunit.junit.internal.ArchUnitTestEngine"
+    },
+    {
+      "type": "java.lang.ClassLoader",
+      "fields": [
+        {
+          "name": "classLoaderValueMap"
+        }
+      ]
+    },
+    {
+      "type": "java.lang.Enum",
+      "serializable": true
+    },
+    {
+      "type": "java.lang.Object"
+    },
+    {
+      "type": "java.lang.Object[]",
+      "serializable": true
+    },
+    {
+      "type": "java.lang.SecurityManager"
+    },
+    {
+      "type": "java.lang.String"
+    },
+    {
+      "type": "java.lang.invoke.MethodHandle"
+    },
+    {
+      "type": "java.util.HashSet",
+      "serializable": true
+    },
+    {
+      "type": "java.util.LinkedHashSet",
+      "serializable": true
+    },
+    {
+      "type": "java.util.concurrent.ArrayBlockingQueue",
+      "serializable": true
+    },
+    {
+      "type": "java.util.concurrent.ConcurrentHashMap"
+    },
+    {
+      "type": "java.util.concurrent.CopyOnWriteArrayList",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "java.util.concurrent.locks.AbstractOwnableSynchronizer",
+      "serializable": true
+    },
+    {
+      "type": "java.util.concurrent.locks.AbstractQueuedSynchronizer",
+      "serializable": true
+    },
+    {
+      "type": "java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject",
+      "serializable": true
+    },
+    {
+      "type": "java.util.concurrent.locks.ReentrantLock",
+      "serializable": true
+    },
+    {
+      "type": "java.util.concurrent.locks.ReentrantLock$NonfairSync",
+      "serializable": true
+    },
+    {
+      "type": "java.util.concurrent.locks.ReentrantLock$Sync",
+      "serializable": true
+    },
+    {
+      "type": "jdk.internal.misc.Unsafe"
+    },
+    {
+      "type": "kotlin.Metadata"
+    },
+    {
+      "type": "org.jobrunr.jobs.AbstractJob",
+      "fields": [
+        {
+          "name": "amountOfRetries"
+        },
+        {
+          "name": "jobDetails"
+        },
+        {
+          "name": "jobName"
+        },
+        {
+          "name": "jobSignature"
+        },
+        {
+          "name": "labels"
+        },
+        {
+          "name": "version"
+        }
+      ]
+    },
+    {
+      "type": "org.jobrunr.jobs.Job",
+      "fields": [
+        {
+          "name": "id"
+        },
+        {
+          "name": "jobHistory"
+        },
+        {
+          "name": "metadata"
+        },
+        {
+          "name": "recurringJobId"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.jobrunr.jobs.JobDetails",
+      "fields": [
+        {
+          "name": "cacheable"
+        },
+        {
+          "name": "className"
+        },
+        {
+          "name": "jobParameters"
+        },
+        {
+          "name": "methodName"
+        },
+        {
+          "name": "staticFieldName"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.jobrunr.jobs.states.AbstractJobState",
+      "fields": [
+        {
+          "name": "createdAt"
+        },
+        {
+          "name": "state"
+        }
+      ]
+    },
+    {
+      "type": "org.jobrunr.jobs.states.EnqueuedState",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.jobrunr.jobs.states.FailedState",
+      "fields": [
+        {
+          "name": "doNotRetry"
+        },
+        {
+          "name": "exceptionCauseMessage"
+        },
+        {
+          "name": "exceptionCauseType"
+        },
+        {
+          "name": "exceptionMessage"
+        },
+        {
+          "name": "exceptionType"
+        },
+        {
+          "name": "message"
+        },
+        {
+          "name": "stackTrace"
+        }
+      ],
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.jobrunr.jobs.states.JobState"
+    },
+    {
+      "type": "org.jobrunr.jobs.states.StateName"
+    },
+    {
+      "type": "org.jobrunr.utils.mapper.jackson.modules.JobMixin"
+    },
+    {
+      "type": "org.jobrunr.utils.mapper.jackson3.Jackson3NativeTest",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        },
+        {
+          "name": "setUp",
+          "parameterTypes": []
+        },
+        {
+          "name": "testDeserializeFailedStateFromJsonWithDoNotRetryFalse",
+          "parameterTypes": []
+        },
+        {
+          "name": "testDeserializeFailedStateFromJsonWithDoNotRetryTrue",
+          "parameterTypes": []
+        },
+        {
+          "name": "testRoundTripFailedStateWithDoNotRetryFalse",
+          "parameterTypes": []
+        },
+        {
+          "name": "testRoundTripFailedStateWithDoNotRetryTrue",
+          "parameterTypes": []
+        },
+        {
+          "name": "testRoundTripJobWithFailedStateDoNotRetryFalse",
+          "parameterTypes": []
+        },
+        {
+          "name": "testRoundTripJobWithFailedStateDoNotRetryTrue",
+          "parameterTypes": []
+        },
+        {
+          "name": "testSerializedFailedStateContainsDoNotRetryField",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "org.jobrunr.utils.resilience.Lockable"
+    },
+    {
+      "type": "sun.security.provider.NativePRNG",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": [
+            "java.security.SecureRandomParameters"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "sun.security.provider.SHA",
+      "methods": [
+        {
+          "name": "<init>",
+          "parameterTypes": []
+        }
+      ]
+    },
+    {
+      "type": "sun.text.resources.cldr.FormatData"
+    },
+    {
+      "type": "sun.text.resources.cldr.FormatData_en"
+    },
+    {
+      "type": "sun.text.resources.cldr.FormatData_en_US"
+    },
+    {
+      "type": "sun.util.resources.cldr.CalendarData"
+    },
+    {
+      "type": "tools.jackson.databind.deser.Deserializers[]"
+    },
+    {
+      "type": "tools.jackson.databind.deser.KeyDeserializers[]"
+    },
+    {
+      "type": "tools.jackson.databind.deser.ValueInstantiators[]"
+    },
+    {
+      "type": "tools.jackson.databind.ser.Serializers[]"
+    }
+  ],
+  "resources": [
+    {
+      "glob": "META-INF/services/ch.qos.logback.classic.spi.Configurator"
+    },
+    {
+      "glob": "META-INF/services/java.nio.channels.spi.SelectorProvider"
+    },
+    {
+      "glob": "META-INF/services/java.time.zone.ZoneRulesProvider"
+    },
+    {
+      "glob": "META-INF/services/org.assertj.core.configuration.Configuration"
+    },
+    {
+      "glob": "META-INF/services/org.assertj.core.presentation.Representation"
+    },
+    {
+      "glob": "META-INF/services/org.junit.platform.commons.support.scanning.ClasspathScanner"
+    },
+    {
+      "glob": "META-INF/services/org.junit.platform.engine.TestEngine"
+    },
+    {
+      "glob": "META-INF/services/org.junit.platform.launcher.LauncherDiscoveryListener"
+    },
+    {
+      "glob": "META-INF/services/org.junit.platform.launcher.LauncherSessionListener"
+    },
+    {
+      "glob": "META-INF/services/org.junit.platform.launcher.PostDiscoveryFilter"
+    },
+    {
+      "glob": "META-INF/services/org.junit.platform.launcher.TestExecutionListener"
+    },
+    {
+      "glob": "META-INF/services/org.slf4j.spi.SLF4JServiceProvider"
+    },
+    {
+      "glob": "archunit.properties"
+    },
+    {
+      "glob": "junit-platform.properties"
+    },
+    {
+      "glob": "logback-test.xml"
+    },
+    {
+      "glob": "logback.xml"
+    }
+  ]
+}

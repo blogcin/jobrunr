@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'org.graalvm.buildtools.native' version '0.11.4'
+}
+
+compileJava {
+    options.release = 17
+}
+
+compileTestJava {
+    options.release = 17
+}
+
+dependencies {
+    implementation project(':core')
+
+    testImplementation 'tools.jackson.core:jackson-databind'
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testImplementation 'org.assertj:assertj-core'
+    testImplementation 'ch.qos.logback:logback-classic'
+
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+graalvmNative {
+    testSupport = true
+    binaries {
+        test {
+            buildArgs.addAll('--no-fallback', '-H:+ReportExceptionStackTraces')
+        }
+    }
+}
+
+sonar {
+    skipProject = true
+}
